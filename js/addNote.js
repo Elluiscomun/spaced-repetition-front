@@ -27,7 +27,7 @@ async function createNote() {
             document.getElementById('note').value ='';
         }
     }catch(err){
-        console.err('Error añadiendo la nota');
+        console.error('Error añadiendo la nota');
     }
 }
 

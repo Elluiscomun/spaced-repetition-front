@@ -5,3 +5,7 @@ function login(){
     window.location.href= '../index.html';
 }
 
+function register(){
+    window.location.assign('../auth/register.html');
+}
+
