@@ -1,0 +1,31 @@
+
+.item_txt{
+    font-family: '', sans-serif;
+    font-weight: 90;
+    font-style: normal;
+    
+}
+
+.options{
+    color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 30px;
+    background-color: #5d5d5d21;
+    padding: 15px;
+    margin-top:10px;
+}
+
+.options p{
+    margin-left: 10px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.options:hover{
+    background-color: #c1c1c1;
+    cursor: pointer;
+}

@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+body{
+    background-color: white;
+    height: 100%;
+}
+
+h1, button, input{
+    font-family: 'Lato', system-ui;
+    font-weight: 600;
+    font-style: normal;    
+}
+
+h1{
+    color: rgb(10, 10, 10); 
+}
+
+input::placeholder{
+    color: #0a0a0a;
+    opacity: 0.5;
+}
+
+input:focus-visible{
+    border: none;
+    outline: none;
+}
+
+input{
+    background-color: white;
+    border: 0px;
+    color: rgb(10, 10, 10);
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.place-user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* width: 100%; */
+    /* justify-content: center; */
+    border-bottom: 1px solid;
+    border-color: rgb(10, 10, 10);;
+    /* height: 46px; */
+    padding: 7px;
+}
+
+.center-user{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 39vh;
+}
+
+.button {
+    padding: 8px 28px;
+    border-radius: 20px;
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .02em;
+    border: none;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin-top: 20px;
+    background-color: rgb(10, 10, 10);
+    color: white;
+}
+
+button:hover{
+    color: rgb(10, 10, 10);
+    background-color: white;
+}

@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+p{
+    font-family: "Lato", system-ui;
+    font-weight: 900;
+    font-style: normal;
+    color: rgba(0, 0, 0, 0.809);
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.note{
+    
+    font-size: 20px;
+}
+
+.content{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0.5em;
+}
