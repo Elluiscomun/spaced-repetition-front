@@ -29,3 +29,13 @@ a{
     background-color: #c1c1c1;
     cursor: pointer;
 }
+
+
+.user_icon {
+    position: fixed;
+    z-index: 1;
+    right: 30px;
+    bottom: calc(28px + env(safe-area-inset-bottom));
+    cursor: pointer;
+    opacity: 90%;
+}

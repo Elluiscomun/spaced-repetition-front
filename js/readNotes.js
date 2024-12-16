@@ -1,8 +1,9 @@
 import { getNameTag } from "./readTagname.js";
+import { URL_BACKEND } from "./env.js";
 
 var notes = [];
 var position = 0;
-const url = 'https://spaced-repetition-q5zu.onrender.com/api/v1/note';
+const url = URL_BACKEND +'/note';
 
 async function getNotes() {
     try{
@@ -35,7 +36,7 @@ async function getNotes() {
 function setNote(){
     if(notes[position]){
         document.getElementById('note').innerText = notes[position].message_note;
-        markNote();
+        markNote(notes[position].id_note);
         position++;
         
     }else{
@@ -45,13 +46,16 @@ function setNote(){
 }
 
 
-async function markNote() {
+async function markNote(id_note) {
     try{
         const response = await fetch(url+'/reviewNote', {
             method: 'put',
             headers: {
                 'Content-type':'application/json'
-            }
+            },
+            body:JSON.stringify({
+                'id_note':id_note
+            })
         });
     }catch(err){
         console.error(err)

@@ -1,9 +1,11 @@
 import { getNameTag } from "./readTagname.js";
+import { URL_BACKEND } from "./env.js";
 
-const url = 'https://spaced-repetition-q5zu.onrender.com/api/v1/note';
+const url = URL_BACKEND + "/note"
 
 async function createNote() {
     const note = document.getElementById('note').value;
+    const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
     if(!note || note===''){
         return;
@@ -19,7 +21,8 @@ async function createNote() {
             },
             body:JSON.stringify({
                 'nametag':nametag,
-                'message':note
+                'message':note,
+                'timeZone':userTimeZone
             })
         });
 

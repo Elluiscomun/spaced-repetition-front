@@ -1,4 +1,6 @@
-const url = 'https://spaced-repetition-q5zu.onrender.com/api/v1';
+import { URL_BACKEND } from "./env";
+
+const url = URL_BACKEND;
 
 async function register(){
     let nametag = document.getElementById("user").value;
