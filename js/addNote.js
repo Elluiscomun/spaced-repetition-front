@@ -3,6 +3,7 @@ import { URL_BACKEND } from "./env.js";
 
 const url = URL_BACKEND + "/note"
 let note = "";
+let errorState = false;
 
 async function createNote() {
     note = document.getElementById('note').value;
@@ -34,11 +35,13 @@ async function createNote() {
     }catch(err){
         console.error('Error añadiendo la nota');
         document.getElementById('note').value = 'Error añadiendo nota: '+note +'\n Haz click en este recuadro e intenta nuevamente';
+        errorState = true;
     }
 }
 
 function setNote(){
-    if(note){
+    if(note && errorState){
+        errorState = false;
         document.getElementById('note').value = note
     }
 }
