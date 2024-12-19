@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+body{
+    margin: 0 10PX 0 10PX;
+}
+
 p{
     font-family: "Lato", system-ui;
     font-weight: 900;
@@ -36,4 +40,13 @@ a{
     flex-direction: row;
     justify-content: space-between;
     margin: 0.5em;
+}
+
+.options p:hover{
+    color: grey;
+}
+
+.switch-date{
+    margin-left: 10px;
+    margin-top: 10px;
 }

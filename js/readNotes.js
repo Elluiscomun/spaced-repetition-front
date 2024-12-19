@@ -6,24 +6,27 @@ var position = 0;
 const url = URL_BACKEND +'/note';
 
 async function getNotes() {
+
     try{
+        document.getElementById('note').innerText = 'Cargando...';
         let nametag = getNameTag();
+        let date = document.getElementById('date').value
         
         const response = await fetch(url+'/read', {
             method: 'GET',
             headers: {
                 'Content-type':'application/json',
-                'nametag':nametag
+                'date_user': date,
+                'nametag':nametag,
             }
         });
     
         if(response.ok){
            const result = await response.json(); 
-           console.log(result);
            notes = result.notes;
            setNote();
         }else{
-            document.getElementById('note').innerText = 'No se encontraron notas para con el usuario registrado'
+            document.getElementById('note').innerText = 'No se encontraron notas para el usuario registrado'
         }
         
         
@@ -63,7 +66,15 @@ async function markNote(id_note) {
 
 }
 
+function setDate(){
+    const today = new Date();
+    const dateInString = today.toISOString().split('T')[0];
+    document.getElementById('date').value = dateInString;
+}
+
+setDate();
 getNotes();
 
 window.setNote = setNote;
+window.getNotes = getNotes;
 

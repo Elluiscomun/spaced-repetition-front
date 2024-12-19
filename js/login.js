@@ -5,6 +5,11 @@ function login(){
     window.location.href= '../index.html';
 }
 
+function exit(){
+    document.cookie = 'nametag=; Max-Age=0 ;path=/';
+    window.location.href='auth/login.html'
+}
+
 function register(){
     window.location.assign('../auth/register.html');
 }

@@ -2,9 +2,11 @@ import { getNameTag } from "./readTagname.js";
 import { URL_BACKEND } from "./env.js";
 
 const url = URL_BACKEND + "/note"
+let note = "";
 
 async function createNote() {
-    const note = document.getElementById('note').value;
+    note = document.getElementById('note').value;
+    document.getElementById('note').value = 'Cargando...'
     const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
     if(!note || note===''){
@@ -31,7 +33,15 @@ async function createNote() {
         }
     }catch(err){
         console.error('Error añadiendo la nota');
+        document.getElementById('note').value = 'Error añadiendo nota: '+note +'\n Haz click en este recuadro e intenta nuevamente';
+    }
+}
+
+function setNote(){
+    if(note){
+        document.getElementById('note').value = note
     }
 }
 
 window.createNote = createNote;
+window.setNote = setNote;

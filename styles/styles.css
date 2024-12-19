@@ -39,3 +39,7 @@ a{
     cursor: pointer;
     opacity: 90%;
 }
+
+.user_icon svg:hover{
+    fill: #c1c1c1;
+}
