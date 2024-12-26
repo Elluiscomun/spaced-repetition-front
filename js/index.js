@@ -1,4 +1,19 @@
+import { URL_BACKEND } from "./env.js";
 
+const url = URL_BACKEND
+
+async function initServer(){
+    try{
+        const response = await fetch(url, {
+            method: 'get',
+            headers: {
+                'Content-type':'application/json'
+            },
+        });
+    }catch(err){
+        console.error(err)
+    }
+}
 
 function setGreeting(){
     const banner = document.getElementById('banner');
@@ -18,4 +33,5 @@ function setGreeting(){
     }
 }
 
+initServer();
 setGreeting();
