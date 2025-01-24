@@ -9,6 +9,7 @@ async function getNotes() {
 
     try{
         document.getElementById('note').innerText = 'Cargando...';
+        position = 0;
         let nametag = getNameTag();
         let date = document.getElementById('date').value
         
