@@ -2,33 +2,33 @@
 
 <img src="notas.png" alt="Logo" width="120"/>
 
-Aplicación web para la gestión y repaso de notas utilizando el método de repetición espaciada.
+Web application for managing and reviewing notes using the spaced repetition method.
 
+**Live demo:** [https://spaced-repetition-note.netlify.app/](https://spaced-repetition-note.netlify.app/)
 
-## Descripción
+## Description
 
-Este proyecto es una interfaz web para gestionar notas y recordatorios, permitiendo a los usuarios añadir, repasar y registrar notas diarias. Utiliza el método de repetición espaciada para mejorar la retención de información.
+This project is a web interface to manage notes and reminders, allowing users to add, review, and log daily notes. It uses the spaced repetition method to improve information retention.
 
-## Características
+## Features
 
-- Registro e inicio de sesión de usuario mediante un "nametag".
-- Añadir nuevas notas o recordatorios.
-- Repasar notas pendientes del día.
-- Interfaz sencilla y responsiva.
-- Integración con backend vía API REST ([ver configuración en `js/env.js`](js/env.js)).
+- User registration and login via "nametag".
+- Add new notes or reminders.
+- Review pending notes for the day.
+- Simple and responsive interface.
+- Backend integration via REST API ([see configuration in `js/env.js`](js/env.js)).
 
+## Usage
 
-## Uso
+1. Start the local server (you can use [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) in VSCode).
+2. Open `index.html` in your browser.
+3. Register with a username.
+4. Add notes from the "Add" section.
+5. Review your daily notes from the "Review" section.
 
-1. Inicia el servidor local (puedes usar [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) en VSCode).
-2. Abre `index.html` en tu navegador.
-3. Regístrate con un nombre de usuario.
-4. Añade notas desde la sección "Añadir".
-5. Repasa tus notas diarias desde la sección "Repasar".
-
-## Tecnologías Utilizadas
+## Technologies Used
 
 - HTML5, CSS3
 - JavaScript (ES6 Modules)
 - [Google Fonts: Lato](https://fonts.google.com/specimen/Lato)
-- API REST para backend (configurable en [`js/env.js`](js/env.js))
+- REST API for backend (configurable in [`js/env.js`](js/env.js))
