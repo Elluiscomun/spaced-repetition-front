@@ -4,6 +4,7 @@ import { URL_BACKEND } from "./env.js";
 var notes = [];
 var position = 0;
 const url = URL_BACKEND +'/note';
+var synth = window.speechSynthesis;
 
 async function getNotes() {
 
@@ -73,9 +74,18 @@ function setDate(){
     document.getElementById('date').value = dateInString;
 }
 
+function speakNote() {
+    let noteElement = document.getElementById('note').innerText;
+    let utterance = new SpeechSynthesisUtterance(noteElement);
+    utterance.lang = 'en-US'; 
+    synth.speak(utterance);
+
+}
+
 setDate();
 getNotes();
 
 window.setNote = setNote;
 window.getNotes = getNotes;
+window.speakNote = speakNote;
 
