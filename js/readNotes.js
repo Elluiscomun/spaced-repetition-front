@@ -78,6 +78,7 @@ function speakNote() {
     let noteElement = document.getElementById('note').innerText;
     let utterance = new SpeechSynthesisUtterance(noteElement);
     utterance.lang = 'en-US'; 
+    utterance.rate = 0.5;
     synth.speak(utterance);
 
 }
