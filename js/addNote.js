@@ -10,7 +10,7 @@ async function createNote() {
     document.getElementById('note').value = 'Cargando...'
     const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
-    if(!note || note===''){
+    if(!note || note==='' || note=='Cargando...'){
         return;
     }
 
